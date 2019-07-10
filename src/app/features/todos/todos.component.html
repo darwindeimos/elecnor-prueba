@@ -1,0 +1,14 @@
+<p>
+    <mat-form-field appearance="outline">
+        <mat-label>Texto</mat-label>
+        <input matInput placeholder="a buscar..." [(ngModel)]="text">
+    </mat-form-field>
+    <button mat-raised-button (click)="search(text)" color="primary">Buscar</button>
+</p>
+<p>
+    <mat-selection-list>
+        <mat-list-option *ngFor="let todo of todosFiltered" [selected]="todo.completed">
+            {{ todo.title }}
+        </mat-list-option>
+    </mat-selection-list>
+</p>
